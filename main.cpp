@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
     string passwd = "BO4yyzPKg5fpAUF2";
     string databasename = "yourdb";
 
-
+ 
     //命令行解析
     Config config;
     config.parse_arg(argc, argv);
