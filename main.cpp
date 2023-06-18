@@ -3,8 +3,8 @@
 int main(int argc, char *argv[])
 {
     //需要修改的数据库信息,登录名,密码,库名
-    string user = "debian-sys-maint";
-    string passwd = "BO4yyzPKg5fpAUF2";
+    string user = "root";
+    string passwd = "abc123";
     string databasename = "yourdb";
 
  
