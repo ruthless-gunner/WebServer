@@ -1,0 +1,3 @@
+2023-06-18 02:37:58.519042 [erro]: MySQL Error[errno=1045]: Access denied for user 'debian-sys-maint'@'localhost' (using password: YES)
+2023-06-18 02:38:38.201958 [info]: timer tick
+2023-06-18 02:38:43.202956 [info]: timer tick
