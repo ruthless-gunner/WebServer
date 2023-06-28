@@ -7,7 +7,7 @@ WebServer::WebServer()
 
     //root文件夹路径
     char server_path[200];
-    getcwd(server_path, 200);//将当前工作目录的路径放在字符串 server_path 中
+    getcwd(server_path, 200);//将当前工作目录的路径（本程序在主机上的绝对路径）放在字符串 server_path 中
     char root[6] = "/root";
     m_root = (char *)malloc(strlen(server_path) + strlen(root) + 1);// strlen()返回除开'\0'以外的字符个数
     strcpy(m_root, server_path);
@@ -206,7 +206,7 @@ bool WebServer::dealclinetdata()
 {
     struct sockaddr_in client_address;
     socklen_t client_addrlength = sizeof(client_address);
-    if (0 == m_LISTENTrigmode)
+    if (0 == m_LISTENTrigmode) //listenfd为LT模式
     {
         int connfd = accept(m_listenfd, (struct sockaddr *)&client_address, &client_addrlength);
         if (connfd < 0)
@@ -223,7 +223,7 @@ bool WebServer::dealclinetdata()
         timer(connfd, client_address);
     }
 
-    else
+    else // listenfd为 ET 模式
     {
         while (1)
         {

@@ -49,7 +49,7 @@ public:
 };
 
 
-//将数据库连接的获取与释放通过RAII机制封装，避免手动释放。
+//将单个数据库连接的获取与释放通过RAII机制封装，避免手动释放。
 class connectionRAII{
 
 public:
